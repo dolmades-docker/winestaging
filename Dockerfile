@@ -5,11 +5,11 @@ MAINTAINER Stefan Kombrink
 # install wine devel
 RUN apt-get update && apt-get install -y winehq-staging && apt-get clean && rm -rf /var/lib/apt/lists/*
 # install mono
-RUN mkdir -p /opt/wine-devel/share/wine/mono && \
-    wget http://dl.winehq.org/wine/wine-mono/4.7.1/wine-mono-4.7.1.msi \
-    -O /opt/wine-devel/share/wine/mono/wine-mono-4.7.1.msi
+RUN mkdir -p /opt/wine-staging/share/wine/mono && \
+    wget http://dl.winehq.org/wine/wine-mono/4.7.3/wine-mono-4.7.3.msi \
+    -O /opt/wine-staging/share/wine/mono/wine-mono-4.7.3.msi
 # install gecko
-RUN mkdir -p /opt/wine-devel/share/wine/gecko && cd /opt/wine-devel/share/wine/gecko && \
+RUN mkdir -p /opt/wine-staging/share/wine/gecko && cd /opt/wine-staging/share/wine/gecko && \
     wget http://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86.msi && \
     wget http://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86_64.msi
 # install & update winetricks
