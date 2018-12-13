@@ -1,2 +1,2 @@
 # winestaging
-wine staging template for deriving custom images
+images tracking current staging wine releases
