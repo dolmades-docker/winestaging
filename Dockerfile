@@ -2,7 +2,7 @@ FROM dolmades/base:latest
 
 MAINTAINER Stefan Kombrink
 
-# install wine devel
+# install wine staging
 RUN apt-get update && apt-get install -y winehq-staging && apt-get clean && rm -rf /var/lib/apt/lists/*
 # install mono
 RUN mkdir -p /opt/wine-staging/share/wine/mono && \
